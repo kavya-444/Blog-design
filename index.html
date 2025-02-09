@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #444;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .burger {
+            font-size: 24px;
+            color: white;
+            display: none;
+            cursor: pointer;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('fashion-bg.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .blog-section {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .post {
+            background: white;
+            margin: 15px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .post img {
+            width: 100%;
+            height: auto;
+        }
+        .read-more {
+            background: #ff4081;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+            }
+            .burger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Fashionista</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">&#9776;</div>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Welcome to Fashionista</h1>
+        <p>Your daily dose of fashion trends & styling tips</p>
+    </section>
+    
+    <section id="blog" class="blog-section">
+        <div class="post">
+            <img src="fashion1.jpg" alt="Fashion Image">
+            <h2>Summer Trends 2025</h2>
+            <p>Discover the hottest trends for this summer...</p>
+            <button class="read-more">Read More</button>
+        </div>
+        <div class="post">
+            <img src="fashion2.jpg" alt="Fashion Image">
+            <h2>10 Must-Have Accessories</h2>
+            <p>Complete your look with these must-have accessories...</p>
+            <button class="read-more">Read More</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Fashionista. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('More content coming soon!');
+            });
+        });
+    </script>
+</body>
+</html>
